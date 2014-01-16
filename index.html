@@ -1,27 +1,30 @@
+<!DOCTYPE html>
 <html>
-	<head>
-    <style>
-      body {
-        background-color: #aaa;
-        font-size: 200%;     
-        padding:0.3em;
-      }
-      section {    
-        background-color: #eee;
-        padding:2em;
-        margin:auto;
-        text-align:center;
-      } 
-    </style>
+  <head>
+    <title>Will it Blend?</title>
+    <link rel="stylesheet" type="text/css" href="stylesheets/styles.css" />
+    <script src="js/lib/jquery.js"></script>
+    <script src="js/dancer.js"></script>
+    <!--<script src="src/blinkyDancer.js"></script>-->
+    <script src="js/nyanCat.js"></script>
+    <script src="js/jigglypuff.js"></script>
   </head>
+  <body>
+    <div class="topbar">
+      <span class="title">Blender!</span>
+      <!-- this button just works, creates a dancer -->
+      <!--<a href="#" class="addDancerButton" data-dancer-maker-function-name="BlinkyDancer">add a blinky dancer</a>-->
+      <a href="#" class="addDancerButton" data-dancer-maker-function-name="NyanCat">add a Nyan Cat!</a>
+      <a href="#" class="addDancerButton" data-dancer-maker-function-name="Jigglypuff">Jigglypuff used Rollout!</a>
+      <a href="#" class="lineUpButton otherButtons">Line Up!</a>
+            <a href="#" class="resetPostion otherButtons">Go Back!</a>
+      <a href="#" class="fillButton otherButtons">Fill the Blender</a>
 
-	<body>
-    <section>
-		  <h1>Running on Rack!!</h1>
-    </section>
-	</body>
 
-	<script type="text/javascript">
-      console.log(document.getElementsByTagName("section")[0]);
-  </script>
+    </div>
+    <div class="blenderImage"></div>
+    <div class="blender"></div>
+    <button class="button blendButton">Will it Blend?</div>
+    <script src="js/dancefloor.js"></script>
+  </body>
 </html>

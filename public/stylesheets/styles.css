@@ -1,0 +1,143 @@
+body, html{
+  height:100%;
+}
+body{
+  height:600px;
+  width: 900px;
+  background: url('./img/blades.jpg') no-repeat;
+  background-position: 0 40px;
+  background-color:#111;
+  font-size: 18px;
+}
+body, a:link, a:visited, a:active{
+  color: lightblue;
+}
+.title, .addDancerButton{
+  padding:5px 12px;
+  float:right;
+}
+.otherButtons{
+  padding:5px 12px;
+  float:left;
+}
+.topbar{
+  height:32px;
+  background-color: #555;
+}
+.title{
+  background-color: #777;
+}
+.dancer{
+  border:10px solid red;
+  border-radius:10px;
+  position:absolute;
+}
+.blinky{
+  width: 10px;
+  height: 10px;
+  border:10px solid blue;
+}
+.nyan{
+  width: 125px;
+  height: 75px;
+  background-image: url('./img/nyan_cat.png');
+  background-size: 100% 100%;
+  border-radius:0;
+  border:none;
+}
+.bounce{
+  -webkit-transform: translate(0, 10px);
+}
+.jiggly{
+  width: 110px;
+  height: 120px;
+  background-image: url('./img/jigglypuff.png');
+  background-size: 100% 100%;
+  border-radius:0;
+  border: none;
+}
+.rotate{
+  -webkit-transform: rotate(360deg);
+}
+.hidden{
+  opacity: 0;
+}
+.track{
+  -webkit-transform: none;
+  border: 1px solid white;
+  -webkit-transition: none;
+}
+
+ @-webkit-keyframes rotate {
+      from { -webkit-transform: rotate(0deg); }
+      to { -webkit-transform: rotate(7200deg); }
+}
+
+@-webkit-keyframes blend{
+  from{-webkit-transform: scale(1,1) rotate(0deg);}
+  to {-webkit-transform: scale(0.05, 0.05) rotate(3600deg);}
+}
+
+.blender, .blenderImage{
+  background-image: url('./img/blades_center.png');
+  background-size: 100% 100%;
+  position: absolute;
+  top: 52px;
+  left: 132px;
+  height: 600px;
+  width: 600px;
+/*  bottom: 50px;
+  right: 100px;*/
+}
+.blender{
+  background-image: none;
+}
+/*.blenderImage{
+  background-image: url('./img/blender.jpg');
+  background-size: 100% 100%;
+  position: absolute;
+  height: 600px;
+  width: 700px;
+}*/
+
+.blending{
+  -webkit-animation: rotate 10s 4000 ease-in-out;
+  animation: rotate 1s 4000 linear;
+}
+
+.shrinking{
+  -webkit-animation: blend 10s 4000 ease-in-out;
+  animation: blend 10s 4000 ease-in-out;
+}
+
+.button{
+    position: fixed;
+    top: 640px;
+    width: 600px;
+    margin: 40px 150px 10px 150px;
+    font-size: 3em;
+    background: white;
+    color: #2e3242;
+    text-align: center;
+    padding: 2.5%;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
+    -webkit-box-shadow: #4f5673 0 10px 0;
+    -moz-box-shadow: #4f5673 0 10px 0;
+    box-shadow: #4f5673 0 10px 0;
+}
+.button:active {
+    -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    -moz-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    -webkit-transform: translate(0, 5px);
+    -moz-transform: translate(0, 5px);
+    -ms-transform: translate(0, 5px);
+    -o-transform: translate(0, 5px);
+    transform: translate(0, 5px);
+    background: #bbbdc7;
+    color: white;
+}
